@@ -36,3 +36,11 @@ console.log("Here is the expression example:",calAgeYear2(1994));
 const calAgeYear3 = year => 2022-year;
 
 console.log(calAgeYear3(1996));
+
+const retrimentYear = (year, fname) => {
+    const age = 2022 - year;
+    const retirement = 60 - age;
+    return `${fname} will retire after ${retirement}`;
+}
+
+console.log(retrimentYear(1994,'Payal'));
