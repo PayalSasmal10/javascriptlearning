@@ -23,3 +23,11 @@ function clacAge1(year){
 
 const calageYear = clacAge1(1994);
 console.log(calageYear);
+
+// function expressions : we don't have to give name of a function i.e it's a annonymous function.
+
+const calAgeYear2 = function (year){
+    return 2022 - year;
+}
+
+console.log("Here is the expression example:",calAgeYear2(1994));
