@@ -31,3 +31,8 @@ const calAgeYear2 = function (year){
 }
 
 console.log("Here is the expression example:",calAgeYear2(1994));
+
+// arrow function 
+const calAgeYear3 = year => 2022-year;
+
+console.log(calAgeYear3(1996));
