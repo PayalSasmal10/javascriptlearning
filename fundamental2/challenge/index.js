@@ -30,8 +30,8 @@ const calcAverage1 = (fs, ss, ts)=> (fs+ss+ts) /3 ;
 console.log(calcAverage1(12, 13, 45));
 
 // TEST1
-const scoreKoalas = calcAverage1(44,23,71);
-const scoreDolhins = calcAverage1(65, 54, 49);
+let scoreKoalas = calcAverage1(44,23,71);
+let scoreDolhins = calcAverage1(65, 54, 49);
 console.log(scoreKoalas, scoreDolhins);
 
 
@@ -51,3 +51,7 @@ checkWinner1(scoreDolhins, scoreKoalas);
 checkWinner1(788,122);
 
 // TEST2
+
+scoreKoalas = calcAverage1(85, 54, 41);
+scoreDolhins = calcAverage1(23, 34, 27);
+checkWinner1(scoreDolhins,scoreKoalas);
