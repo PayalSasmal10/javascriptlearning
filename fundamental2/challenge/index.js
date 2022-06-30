@@ -1,9 +1,14 @@
+// 1st Way
 // arrow function 
-const calcAverage = (fscore,sscore,tscore) => (fscore + sscore + tscore) /3;
+const calcAverage = (fscore,sscore,tscore) =>{
+    const resultAvg = (fscore + sscore + tscore) /3;
+    console.log(resultAvg);
+    return resultAvg;
+}
 
 
 function checkWinner(){
-    const avgDolhins = calcAverage(44,23,71);
+    const avgDolhins = calcAverage(44,2,3);
     const avgKoalas  = calcAverage(65,54,49);
     if (avgDolhins > avgKoalas){
         console.log("Dolhins win ("+avgDolhins+ ' vs. '+avgKoalas+')');
