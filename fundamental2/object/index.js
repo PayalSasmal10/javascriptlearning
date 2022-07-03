@@ -13,14 +13,14 @@ console.log(person.firstName);
 console.log(person['job']);
 
 // bracket notation usages.
-// const interestedIn = prompt("Choose these values to get info of payal, firstName, lastName, age, job and friednds ");
+const interestedIn = prompt("Choose these values to get info of payal, firstName, lastName, age, job and friednds ");
 
-// if(person[interestedIn]){
-//     console.log(person[interestedIn]);
-// }else{
-//     console.log("Wrong request!. please choose correct one");
+if(person[interestedIn]){
+    console.log(person[interestedIn]);
+}else{
+    console.log("Wrong request!. please choose correct one");
 
-// }
+}
 
 person.location = 'India';
 person['twitter'] = 'payalsasmal';
