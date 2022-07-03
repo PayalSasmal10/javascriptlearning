@@ -29,3 +29,8 @@ if (index > -1){
     numberArray.splice(index,1)
 }
 console.log(numberArray);
+
+// include method - we can use if we want to find a value in an array.
+if (numberArray.includes(1)){
+    console.log("Array contains your number.");
+}
