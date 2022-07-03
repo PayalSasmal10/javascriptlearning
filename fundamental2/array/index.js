@@ -10,3 +10,22 @@ console.log(numberArray);
 numberArray.unshift('sasmal');
 console.log(numberArray);
 
+// remove element from the end of the array.
+numberArray.pop();
+console.log(numberArray);
+
+// remove element from the first position of the array.
+
+numberArray.shift();
+console.log(numberArray);
+
+// remove element from a particular position.
+numberArray.splice(2,2); // splice(start, deletecount)
+console.log(numberArray);
+
+//using indexof
+const index = numberArray.indexOf(5);
+if (index > -1){
+    numberArray.splice(index,1)
+}
+console.log(numberArray);
