@@ -34,13 +34,31 @@
 const person = {
     firstName: 'Payal',
     lastName: 'Sasmal',
-    age: 2022-1994,
+    birthyear: 1994,
     job: 'Software Developer',
     friends: ['A', 'B', 'C'],
     hasDRiverLicense: true,
-    calcAge: function(birthyear) {
-        return 2022 - birthyear;
+    
+    // calcAge: function(birthyear) {
+    //     return 2022 - birthyear;
+    // }
+
+    // calcAge: function() {
+    //     return 2022 - this.birthyear;
+    // }
+
+    calcAge: function() {
+        this.age = 2022 - this.birthyear;
+        return this.age;
     }
 };
 
-console.log(person.calcAge(1994));
+
+// console.log(person.calcAge(1994));
+
+// console.log(person.calcAge());
+
+
+console.log(person.calcAge());
+
+
