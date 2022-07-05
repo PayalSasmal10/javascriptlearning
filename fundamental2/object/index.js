@@ -37,7 +37,7 @@ const person = {
     birthyear: 1994,
     job: 'Software Developer',
     friends: ['A', 'B', 'C'],
-    hasDRiverLicense: true,
+    hasDRiverLicense: false,
     
     // calcAge: function(birthyear) {
     //     return 2022 - birthyear;
@@ -50,6 +50,11 @@ const person = {
     calcAge: function() {
         this.age = 2022 - this.birthyear;
         return this.age;
+    },
+
+    getSummery: function(){
+        return `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and she has ${this.hasDRiverLicense ? 'a' : 'no'} driver's Lisence`;
+        
     }
 };
 
@@ -58,7 +63,11 @@ const person = {
 
 // console.log(person.calcAge());
 
-
 console.log(person.calcAge());
+console.log(person.age);
 
+
+// Challenge- "Jonas is a 46 years old teacher, and he has a driver's license".
+
+console.log(person.getSummery());
 
