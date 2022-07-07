@@ -32,3 +32,15 @@ const payal = ['payal', 'sasmal', 2022-1994, 'SW Engineer', ['Prince', 'Dibya', 
 for (let i = payal.length; i>=0; i--){
     console.log(i, payal[i]);
 }
+
+
+// Loop inside of a loop
+
+console.log(".........................................................");
+for(let exercise=1; exercise < 4; exercise++){
+    console.log(`-------------starting exercise ${exercise}`);
+
+    for (let rep=1; rep<6; rep++){
+        console.log(`Lifting weight repetition ${rep}`);
+    }
+}
