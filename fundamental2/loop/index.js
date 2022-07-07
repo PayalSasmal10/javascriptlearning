@@ -25,3 +25,10 @@ for (let i= 0; i < years.length; i++){
 
 console.log(age);
 
+//backward array
+console.log("..........................................................")
+const payal = ['payal', 'sasmal', 2022-1994, 'SW Engineer', ['Prince', 'Dibya', 'Arpita'], true];
+
+for (let i = payal.length; i>=0; i--){
+    console.log(i, payal[i]);
+}
