@@ -49,7 +49,7 @@ const person = {
 
     calcAge: function() {
         this.age = 2022 - this.birthyear;
-        return this.age;
+        return this.age ;
     },
 
     getSummery: function(){
