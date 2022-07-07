@@ -44,3 +44,12 @@ for(let exercise=1; exercise < 4; exercise++){
         console.log(`Lifting weight repetition ${rep}`);
     }
 }
+
+// while loop- concept
+console.log("...............................While loop.........................");
+
+let i = 1;
+while(i <= 10){
+    console.log(i);
+    i++;
+}
