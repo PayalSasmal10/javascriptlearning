@@ -16,3 +16,22 @@ for (let i=0; i< bills.length; i++){
 
 console.log(tips);
 console.log(totals);
+
+
+
+//  2nd Challenge
+console.log("................Second Challenge..................");
+
+const calcAverage = function(arr){
+    let sum = 0;
+    for (let i = 0; i<arr.length; i++){
+        sum += arr[i];
+        
+
+    }
+    average = sum / arr.length;
+    return average;
+} 
+
+console.log(calcAverage(bills));
+console.log(calcAverage(totals));
