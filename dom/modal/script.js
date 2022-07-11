@@ -6,11 +6,9 @@ const btncloseModal = document.querySelector('.close-modal');
 const btnsShowModal = document.querySelectorAll('.show-modal');
 // console.log(btnsShowModal);
 
-for(let i = 0; i < btnsShowModal.length; i++){
-    btnsShowModal[i].addEventListener("click", function(){
-        modal.classList.remove('hidden');
-        overlay.classList.remove('hidden');
-    });
+const openModal = function(){
+    modal.classList.remove('hidden');
+    overlay.classList.remove('hidden');
 }
 
 const closeModal = function(){
@@ -18,6 +16,21 @@ const closeModal = function(){
     overlay.classList.add("hidden");
 }
 
+for(let i = 0; i < btnsShowModal.length; i++){
+    btnsShowModal[i].addEventListener("click",openModal );
+}
+
 btncloseModal.addEventListener('click', closeModal);
 
 overlay.addEventListener('click', closeModal);
+
+// using esc key to close the modal
+document.addEventListener('keydown', function (e) {
+    console.log(e.key);
+    if (e.key === 'Escape'){
+        if (!modal.classList.contains('hidden')){
+            closeModal();
+        }
+        
+    }
+})
