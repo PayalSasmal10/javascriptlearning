@@ -55,6 +55,7 @@ btnRoll.addEventListener('click', function () {
     }
 })
 
+// holding scoire feature
 const holdScore = function() {
     total += currentScore;
     console.log(`inside hold score ${total}`);
