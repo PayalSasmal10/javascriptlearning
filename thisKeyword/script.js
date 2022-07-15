@@ -105,3 +105,27 @@ oli.calcAge();
 Note
 1. Arrow function should not give local scope of object so output is undefinied.
 */
+
+
+console.log("...................Argument Keyword.................");
+
+const addExpr = function (a, b){
+    console.log(arguments);
+    return a + b;
+}
+
+addExpr(2,6);
+addExpr(2, 6, 4, 5, 6); // we can add more argument here and also can use even though we have not declare the argument variable in function.
+
+
+const addArrw = (a, b) =>{
+    console.log(arguments);
+    return a + b;
+}
+
+addArrw(4, 6);
+
+/*
+Note-
+Argument keyword is only application for regular function and not for arrow function.
+*/
