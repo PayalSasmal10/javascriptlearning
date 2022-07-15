@@ -50,7 +50,12 @@ Note-
 2. Inside function(function expression example), it will be undifined if we use as strict mode else it will be the global window object.
 3. Inside function(arrow function), it will be pointing to window object for arrow function.
 4. for object example, we are checking calcAge
-*/
+5. is MIllien example( down in regular function example), if a function is inside of a function then this keyword would be undefinied. 
+Inner function This keyword doe not work.
+  We can solve the above problem with
+    i. this line const self = this (solution 1) [which is outside of inner function and we can use that self keyword inside of inner function]
+    ii. WE can use arrow function as it has parent scope.
+    */
 
 console.log("...........................Regular vs Arrow Function....................")
 // Regular function vs Arrow function lecture
@@ -60,18 +65,38 @@ const oli = {
     firstName : "Oli",
     year : 1994,
     calcAge : function() {
+        console.log("..............CalAge...............");
         console.log(this);
         console.log(2022-this.year);
         console.log(`Hey ${this.firstName} from calcAge function`);
+
+        // Solution 1
+        /*const self = this; // self or that
+        const isMillenial = function (){
+            console.log(self);
+            console.log( self.year >= 1994 && self.year <= 1998);
+        }
+        isMillenial();*/
+
+        // Solution 2
+        console.log(".................Second Solution.................");
+        const isMillenial =  () =>{
+
+            console.log(this);
+            console.log( this.year >= 1994 && this.year <= 1998);
+        }
+        isMillenial();
     },
 
     greet: () => {
+        console.log(".............Greet.................");
         console.log(this);
         console.log(`Hey ${this.firstName} from global scope`);
     },
 }
-oli.calcAge();
 oli.greet();
+oli.calcAge();
+
 
 
 
