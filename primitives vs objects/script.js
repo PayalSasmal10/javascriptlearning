@@ -32,3 +32,20 @@ const payalCopy = payal;
 payalCopy.lastName = 'Payal Kumar Prince';
 console.log('Before marriage', payal);
 console.log('After marriage', marriedPayal);
+
+
+//  shallow copy example
+console.log("...................shallow copy Example...............");
+const payal3 = {
+    firstName : 'Payal',
+    lastName : 'Sasmal',
+    age : 27,
+    family: ['Pratima', 'Priyam'],
+}
+
+const payalCopy3 = payal3;
+payalCopy3.family.push('Priyashree');
+payalCopy3.family.push('Piglu');
+
+console.log('Before marriage', payal3);
+console.log('After marriage', payalCopy3);
