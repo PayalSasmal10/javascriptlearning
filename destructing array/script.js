@@ -1,5 +1,6 @@
 'use strict';
 
+// Destructuring Array lecture code.
 const restaurant = {
     name : 'Classical Italiano',
     location : 'Via Angelo Tavanti 23, Firenze, Italy',
@@ -55,3 +56,12 @@ console.log(i, j);
 const [n,,[m,k]] = nested;
 console.log(n,m,k);
 console.log(n,[m,k]);
+
+// how to get undefined values
+
+const [p, q, r, s] = [9, 4, 2];
+console.log(p, q, r, s);
+
+// how to assigned default variables
+const [t=1, u=1, v=1] = [9, 4];
+console.log(t, u, v);
