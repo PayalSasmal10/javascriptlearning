@@ -93,6 +93,10 @@ const restaurant2 = {
     order : function(startIndex, mainIndex){
         return [this.startMenu[startIndex], this.mainMenu[mainIndex]];
     },
+
+    orderDelivery: function(obj) {
+        console.log(obj);
+    }
 };
 
 
@@ -116,3 +120,11 @@ console.log(w,o);
 // Nested objects
 const {fri : {open : op, close: cl}} = openingHours;
 console.log(op, cl);
+
+// orderDelivery
+restaurant2.orderDelivery({
+    time: '12:20',
+    address : 'Here you go',
+    mainIndex: 2,
+    startIndex : 2,
+});
