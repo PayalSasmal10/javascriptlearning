@@ -1,6 +1,6 @@
 'use strict';
 
-// Destructuring Array lecture code.
+// 1. Destructuring Array lecture code.
 const restaurant = {
     name : 'Classical Italiano',
     location : 'Via Angelo Tavanti 23, Firenze, Italy',
@@ -65,3 +65,52 @@ console.log(p, q, r, s);
 // how to assigned default variables
 const [t=1, u=1, v=1] = [9, 4];
 console.log(t, u, v);
+
+
+
+// 2. Destructuring Objects/dictionary/map
+console.log("......................Destructuring Objects Started....................")
+const restaurant2 = {
+    name : 'Classical Italiano',
+    location1 : 'Via Angelo Tavanti 23, Firenze, Italy',
+    categories : ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+    startMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+    mainMenu : ['Pizza', 'Pasta', 'Risotto'],
+    openingHours : {
+        thu: {
+            open: 12,
+            close: 22,
+        },
+        fri: {
+            open: 11,
+            close: 23,
+        },
+        sat: {
+            open: 0,
+            close: 24,
+        },
+    },
+    order : function(startIndex, mainIndex){
+        return [this.startMenu[startIndex], this.mainMenu[mainIndex]];
+    },
+};
+
+
+const { name, categories, mainMenu, openingHours, location1 } = restaurant2;
+console.log(name, location1, categories, mainMenu, openingHours);
+
+const { name : restaurantName, openingHours: hour, categories : tags} = restaurant2;
+console.log(restaurantName, hour, tags);
+
+// default values allocation
+const { menu = [], startMenu: starters = [], categories: tagsC = []} = restaurant2;
+console.log(menu, starters, tagsC);
+
+// Mutating variables
+let w = 110;
+let o = 200;
+const obj = { w : 23, o : 80, c : 0.1};
+({w,o} = obj);
+console.log(w,o);
+
+// Nested objects
