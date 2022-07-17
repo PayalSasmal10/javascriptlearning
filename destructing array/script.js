@@ -94,7 +94,7 @@ const restaurant2 = {
         return [this.starterMenu[startIndex], this.mainMenu[mainIndex]];
     },
 
-    orderDelivery: function({starterIndex, address, mainIndex, time}) {
+    orderDelivery: function({starterIndex = 1, address, mainIndex = 0, time = '20:00'}) {
         // console.log(obj);
         console.log(`Order Delivered! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`);
     }
