@@ -74,7 +74,7 @@ const restaurant2 = {
     name : 'Classical Italiano',
     location1 : 'Via Angelo Tavanti 23, Firenze, Italy',
     categories : ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
-    startMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+    starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
     mainMenu : ['Pizza', 'Pasta', 'Risotto'],
     openingHours : {
         thu: {
@@ -91,11 +91,12 @@ const restaurant2 = {
         },
     },
     order : function(startIndex, mainIndex){
-        return [this.startMenu[startIndex], this.mainMenu[mainIndex]];
+        return [this.starterMenu[startIndex], this.mainMenu[mainIndex]];
     },
 
-    orderDelivery: function(obj) {
-        console.log(obj);
+    orderDelivery: function({starterIndex, address, mainIndex, time}) {
+        // console.log(obj);
+        console.log(`Order Delivered! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`);
     }
 };
 
@@ -126,5 +127,5 @@ restaurant2.orderDelivery({
     time: '12:20',
     address : 'Here you go',
     mainIndex: 2,
-    startIndex : 2,
+    starterIndex : 2,
 });
