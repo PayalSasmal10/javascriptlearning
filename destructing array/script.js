@@ -24,3 +24,16 @@ console.log(x, y, z);
 console.log("....................SWap variables...................");
 let [main, secondary] = restaurant.categories;
 console.log(main, secondary);
+
+// 1st way to swap the variables
+// const temp = main;
+// main = secondary;
+// secondary = temp;
+
+// console.log(main, secondary);
+
+console.log("......2nd Way to swap the variables..........");
+
+[main, secondary] = [secondary, main];
+
+console.log(main, secondary);
