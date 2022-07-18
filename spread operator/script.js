@@ -86,11 +86,17 @@ restaurant.orderPasta(...ingredients);
 const newRestaurant = {foundedIn : 1998, ...restaurant, founder : 'Payal'};
 console.log(newRestaurant);
 
+// This can happened with deep copy
+const newRestaurantCopy = {...restaurant};
+newRestaurantCopy.name = 'Payal\'s Restaurant';
+console.log(newRestaurantCopy.name, restaurant.name)
+
 /*
 Note:
 1. Spread opeartor is a diff from destructring- it takes the elements from the array.
 and it doesn't create new variables.AS a consequence, we only can use in places where we would otherwise
 we write values sperate by commas.
-2. Spread operator works on iterable- arrays, strings, sets, maps. but not objects.
+2. Spread operator works on iterable- arrays, strings, sets, maps. but not objects. but spread operator 
+can work on objects even though it is not iterable.
  
 */
