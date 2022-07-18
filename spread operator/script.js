@@ -38,6 +38,9 @@ const restaurant = {
     orderDelivery: function({starterIndex = 1, address, mainIndex = 0, time = '20:00'}) {
         // console.log(obj);
         console.log(`Order Delivered! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`);
+    },
+    orderPasta : function(ing1, ing2, ing3){
+        console.log(`Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3}`);
     }
 };
 
@@ -46,6 +49,7 @@ const restaurant = {
 
 const newMenu = [...restaurant.mainMenu, 'Butter Paneer masala'];
 console.log(newMenu);
+
 
 
 // shallow Copy to an array 
@@ -57,6 +61,8 @@ console.log(mainMenuCopy);
 const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
 console.log(menu);
 
+
+
 // Spread operator can work on strings
 const str = "Payal";
 const letters = [...str, 's.'];
@@ -64,7 +70,13 @@ console.log(...str);
 console.log(...str,'','.s');
 console.log(letters);
 
+const ingredients = [prompt('Let\'s make pasta! Ingredient 1?'),
+prompt('Ingredient 2?'),prompt('Ingredient 3?')];
 
+restaurant.orderPasta(ingredients[0],
+    ingredients[1], ingredients[2]);
+
+restaurant.orderPasta(...ingredients);
 
 
 
