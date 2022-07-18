@@ -1,4 +1,4 @@
-
+'use'
 // Primitive types
 let lastName = 'Sasmal';
 let oldlastName = lastName;
@@ -43,9 +43,10 @@ const payal3 = {
     family: ['Pratima', 'Priyam'],
 }
 
-const payalCopy3 = payal3;
+const payalCopy3 = Object.assign({}, payal3);
 payalCopy3.family.push('Priyashree');
 payalCopy3.family.push('Piglu');
+payalCopy3.family.push('Tiklu');
 
 console.log('Before marriage', payal3);
 console.log('After marriage', payalCopy3);
