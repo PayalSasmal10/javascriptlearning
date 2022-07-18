@@ -57,9 +57,22 @@ console.log(mainMenuCopy);
 const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
 console.log(menu);
 
+// Spread operator can work on strings
+const str = "Payal";
+const letters = [...str, 's.'];
+console.log(...str);
+console.log(...str,'','.s');
+console.log(letters);
+
+
+
+
+
 /*
 Note:
 1. Spread opeartor is a diff from destructring- it takes the elements from the array.
 and it doesn't create new variables.AS a consequence, we only can use in places where we would otherwise
-we write values sperate by commas
+we write values sperate by commas.
+2. Spread operator works on iterable- arrays, strings, sets, maps. but not objects.
+ 
 */
