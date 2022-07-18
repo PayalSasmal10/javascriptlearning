@@ -70,15 +70,21 @@ console.log(...str);
 console.log(...str,'','.s');
 console.log(letters);
 
-const ingredients = [prompt('Let\'s make pasta! Ingredient 1?'),
-prompt('Ingredient 2?'),prompt('Ingredient 3?')];
+// Real world example
+const ingredients = [
+    // prompt('Let\'s make pasta! Ingredient 1?'),
+    // prompt('Ingredient 2?'),
+    // prompt('Ingredient 3?')
+];
 
 restaurant.orderPasta(ingredients[0],
     ingredients[1], ingredients[2]);
 
 restaurant.orderPasta(...ingredients);
 
-
+// objects
+const newRestaurant = {foundedIn : 1998, ...restaurant, founder : 'Payal'};
+console.log(newRestaurant);
 
 /*
 Note:
