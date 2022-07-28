@@ -67,11 +67,21 @@ console.log("....AND Operator......");
 // if both value is truthy then take the last value.
 
 console.log(0 && 'Payal');
+console.log('Payal' && 'Sasmal');
+console.log('Payal' && 90 && 'Sasmal' && null && 23);
 
-console.log(restaurant.orderPizza);
 if (restaurant.orderPizza){
     restaurant.orderPizza('Mushrooms', 'Spanich');
 }
 
 restaurant.orderPizza && restaurant.orderPizza('Chicken', 'Tasty');
 
+// Nulish value means - if it is not undefined or null then return that 1st value,
+// nullish doesnt mean- 0 or ''
+
+restaurant.numberGuest = 0;
+const guest3 = restaurant.numberGuest ?? 10;
+console.log(guest3);
+// restaurant.numberGuest = 0;
+const guest4 = restaurant.numberGuest1 ?? 10;
+console.log(guest4);
