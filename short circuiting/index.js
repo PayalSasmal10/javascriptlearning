@@ -2,6 +2,9 @@
 // short circuiting- use any data type, return any data type.
 
 // find the truthy value if it is exsist then return that value
+// if both value is falsy then take the last value.
+console.log("...........OR Operator..........");
+
 console.log(3 || 'Payal');
 
 console.log(null || 'Payal');
@@ -53,4 +56,22 @@ restaurant.numberGuest = 23;
 const guest1 = restaurant.numberGuest ? restaurant.numberGuest : 10;
 console.log(guest1); 
 
-// 
+// using short circuiting
+
+const guest2 = restaurant.numberGuest || 10;
+console.log(guest2);
+
+
+console.log("....AND Operator......");
+// exactly the opposite OR operator. it return the falsy value.
+// if both value is truthy then take the last value.
+
+console.log(0 && 'Payal');
+
+console.log(restaurant.orderPizza);
+if (restaurant.orderPizza){
+    restaurant.orderPizza('Mushrooms', 'Spanich');
+}
+
+restaurant.orderPizza && restaurant.orderPizza('Chicken', 'Tasty');
+
